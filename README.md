@@ -2,6 +2,7 @@
 simple sample grails opencv fix! 
 
 This started as a stack-trace question that I was interested in. 
+http://stackoverflow.com/questions/37393736/how-to-get-opencv-to-work-with-grails-3-using-intellij-idea
 
 You need to have the OPENCV DLL in the PATH & in the files directory. IDK why. 
 
