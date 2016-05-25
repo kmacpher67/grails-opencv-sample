@@ -34,4 +34,14 @@ class HelloController {
         System.out.println("m = " + m.dump());
         render m.dump();
     }
+
+    def faceDetect(){
+        Hello hello = new Hello();
+        def props = grailsApplication.getProperties();
+        //System.out.println("grailsApplication.getProperties() = " + grailsApplication.getProperties());
+        String filepath = grailsAttributes.getApplicationContext().getResource("/lbpcascade_frontalface.xml").getFile().getAbsolutePath()
+        String imageloc = grailsAttributes.getApplicationContext().getResource("/AverageMaleFace.jpg").getFile().getAbsolutePath()
+        def faceDetect = hello.faceDetect(filepath, imageloc);
+        render "<A href="+faceDetect+"> face detect file ${faceDetect} </a>"
+    }
 }
